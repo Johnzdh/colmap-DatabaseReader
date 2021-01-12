@@ -49,7 +49,7 @@ MatrixType ReadDynamicMatrixBlob(sqlite3_stmt* sql_stmt, const int rc,
 
 cv::cvKps CVKeyPointsFromBlob(const FeatureKeypointsBlob& blob)
 {
-    cv::cvKps keypoints(static_cast<size_t>(blob.rows()));
+    cv::cvKps keypoints;
 
     if (blob.cols() == 2) 
     {
